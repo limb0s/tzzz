@@ -11,7 +11,7 @@ public class Solution {
         String primer = scan.nextLine();
         if (primer.matches("\\d+\\s*[+\\-*/]\\s*\\d+")) {
             Arab(primer);
-        } else if (primer.matches("(I{0,3}V{0,1}X{0,3}L{0,1}C{0,3}D{0,1}M{0,5})\\s*[+\\-*/]\\s*(I{0,3}V{0,1}X{0,3}L{0,1}C{0,3}D{0,1}M{0,5})")) {
+        } else if (primer.matches("M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\\s*[+\\-*]\\s*M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})")) {
             Rim(primer);
         }
         else if(primer.matches("[IVXLCDM\\d+]\\s*[+\\-*/]\\s*[IVXLCDM\\d+]")) {
