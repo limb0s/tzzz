@@ -11,10 +11,10 @@ public class Solution {
         String primer = scan.nextLine();
         if (primer.matches("\\d+\\s*[+\\-*/]\\s*\\d+")) {
             Arab(primer);
-        } else if (primer.matches("M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\\s*[+\\-*]\\s*M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})")) {
+        } else if (primer.matches("M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\\s*[+\\-*/]\\s*M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})")) {
             Rim(primer);
         }
-        else if(primer.matches("[IVXLCDM\\d+]\\s*[+\\-*/]\\s*[IVXLCDM\\d+]")) {
+        else if(primer.matches("M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\\d{0,2})\\s*[+\\-*/]\\s*M{0,5}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\\d{0,2})")) {
             throw new IllegalArgumentException("throws Exception //т.к. используются одновременно разные системы счисления");
         } else if (primer.matches("[IVXLCDM\\d+]+\\s*[+\\-*/]\\s*[IVXLCDM\\d+]+\\s*[+\\-*/]\\s*[IVXLCDM\\d+]+")) {
             throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
